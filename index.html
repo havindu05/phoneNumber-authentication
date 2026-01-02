@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentication App</title>
+    <title>Mobile Number OTP Verification</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Authentication App</h1>
-    <p>Please log in or sign up to continue.</p>
+    <div class="container">
+        <h2>Mobile Number Authentication</h2>
+        
+        <div id="phoneSection">
+            <input type="text" id="phone" placeholder="Mobile Number (ex: 0771234567)" maxlength="10">
+            <button id="sendBtn">Send OTP</button>
+        </div>
+        
+        <div id="otpSection">
+            <p>OTP එක send කළා (Demo: message එකේ හෝ console එකේ බලන්න)</p>
+            <div class="otp-inputs">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+                <input type="text" maxlength="1" class="otp-digit">
+            </div>
+            <button id="verifyBtn">Verify OTP</button>
+        </div>
+        
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="home.js"></script>
 </body>
 </html>
